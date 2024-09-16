@@ -72,6 +72,7 @@ AWS Cloud9 is a development environment that automatically configures instances 
 2. **Install Required Libraries** : Execute following line of code: `python -m pip install aws-cdk-lib aws-cdk.aws-ec2 aws-cdk.aws-iam`
 3. **Define the EC2 Instance in Stack** : Perform the process within the file proccess_run.py
 4. **Stack deployment** : (First verify existance with: `cdk bootstrap`) Execute line: `cdk deploy` (Set public IP address, IPv4)
+5. **Verify access point**: Execute line on AWS command line for session: `$ ssh -i /path/to/key.pem ec2-user@<INSTANCE_PUBLIC_IP>`.
 
 ## References
 - AWS CDK Documentation: https://docs.aws.amazon.com/cdk/latest/guide/home.html
