@@ -65,6 +65,14 @@ AWS Cloud9 is a development environment that automatically configures instances 
 - **Security group:** We use Vockey for simplicity's sake as access through SSH and HTTP.
 - **IAM ROLE:** Attaches an IAM role with SSM permissions to allow management without SSH.
 
+## Instructions
+
+(All commands ennacted on the ICL)
+1. **Install AWS CDK and Initialize the Project** : Start by creating a directory for your project and initializing it as a CDK app using Python. (Associated file named: assembler)
+2. **Install Required Libraries** : Execute following line of code: `python -m pip install aws-cdk-lib aws-cdk.aws-ec2 aws-cdk.aws-iam`
+3. **Define the EC2 Instance in Stack** : Perform the process within the file proccess_run.py
+4. **Stack deployment** : (First verify existance with: `cdk bootstrap`) Execute line: `cdk deploy` (Set public IP address, IPv4)
+
 ## References
 - AWS CDK Documentation: https://docs.aws.amazon.com/cdk/latest/guide/home.html
 - AWS EC2 User Guide: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html
