@@ -74,6 +74,26 @@ AWS Cloud9 is a development environment that automatically configures instances 
 4. **Stack deployment** : (First verify existance with: `cdk bootstrap`) Execute line: `cdk deploy` (Set public IP address, IPv4)
 5. **Verify access point**: Execute line on AWS command line for session: `$ ssh -i /path/to/key.pem ec2-user@<INSTANCE_PUBLIC_IP>`.
 
+## Setup and Deployment
+
+This section outlines the steps to install, configure, and deploy the infrastructure using AWS CDK.
+
+1. **Install AWS CDK and Initialize the Project**  
+   Start by creating a directory for your project and initializing it as a CDK app using Python.
+   ```bash
+   mkdir aws-cdk-project
+   cd aws-cdk-project
+   cdk init app --language python
+2. **Install required libraries**
+   Install the necessary libraries for AWS CDK, EC2, and IAM by running the following:
+   `python -m pip install aws-cdk-lib aws-cdk.aws-ec2 aws-cdk.aws-iam`
+3. **Define the EC2 instance**
+   Define the EC2 instance in your stack by editing the app_sys.py and final_app.py file. This will include setting up the instance type, security groups, and user data. Finally very the contents of CDK-typescript.ts and CDK-ts-typescript.ts for the generation.
+4. **Deploy the Stack**
+   Make sure the enviormeny is bootstrapped with `cdk bootstrap`.
+   Then deploy with `cdk deploy`
+   Finally, verify access through ssh entry with: `ssh -i /path/to/key.pem ec2-user@<INSTANCE_PUBLIC_IP>`
+
 ## References
 - AWS CDK Documentation: https://docs.aws.amazon.com/cdk/latest/guide/home.html
 - AWS EC2 User Guide: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html
