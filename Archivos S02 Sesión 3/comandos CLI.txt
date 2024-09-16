@@ -1,0 +1,7 @@
+aws cloudformation create-stack --stack-name "crear-mv-con-webs" --template-body file://plantilla_crear_mv_con_webs.yaml --parameters ParameterKey=InstanceName,ParameterValue="MV con 2 Webs" ParameterKey=AMI,ParameterValue="ami-0aa28dab1f2852040"
+
+aws cloudformation describe-stacks --stack-name "crear-mv-con-webs"
+
+aws cloudformation delete-stack --stack-name "crear-mv-con-webs“
+
+aws cloudformation describe-stacks --stack-name "crear-mv-con-webs"
